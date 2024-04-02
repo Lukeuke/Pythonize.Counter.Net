@@ -81,4 +81,37 @@ public class Counter<T> where T : notnull
             }
         }
     }
+
+    /// <summary>
+    /// Returns the specified number of most common elements along with their counts from the dictionary.
+    /// </summary>
+    /// <param name="count">The number >1 of most common elements to return.</param>
+    /// <returns>
+    /// An <see cref="IEnumerable{T}"/> containing the specified number of most common elements along with their counts.
+    /// </returns>
+    /// <exception cref="ArgumentOutOfRangeException">Thrown when <paramref name="count"/> is less than 1.</exception>
+    public IEnumerable<KeyValuePair<T, int>> MostCommon(int count)
+    {
+        if (count < 1)
+        {
+            throw new ArgumentOutOfRangeException(nameof(count), "value must be > 1");
+        }
+        
+        var mostCommon = new Dictionary<T, int>();
+
+        foreach (var pair in _counts)
+        {
+            if (mostCommon.TryGetValue(pair.Key, out var countPair))
+            {
+                mostCommon[pair.Key] += countPair;
+            }
+            else
+            {
+                mostCommon.Add(pair.Key, pair.Value);
+            }
+        }
+
+        return mostCommon.OrderByDescending(pair => pair.Value)
+            .Take(count);
+    }
 }
