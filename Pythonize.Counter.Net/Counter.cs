@@ -73,16 +73,12 @@ public class Counter<T> where T : notnull
     /// <returns>An enumerable containing elements based on the counts of items.</returns>
     public IEnumerable<T> Elements()
     {
-        var l = new List<T>();
-        
         foreach (var (key, value) in _counts)
         {
             for (var i = 0; i < value; i++)
             {
-                l.Add(key);
+                yield return key;
             }
         }
-
-        return l;
     }
 }
