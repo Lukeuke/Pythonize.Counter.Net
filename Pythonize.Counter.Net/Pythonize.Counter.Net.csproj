@@ -4,6 +4,26 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Title>PythonizeCounterNet</Title>
+        <Authors>Lukeuke</Authors>
+        <Company>Lukeuke</Company>
+        <Description>Acts like Counter from python!</Description>
+        <PackageProjectUrl>https://lukeuke.github.io/Pythonize.Counter.Net</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/Lukeuke/Pythonize.Counter.Net</RepositoryUrl>
+        <PackageTags>Counter, Python</PackageTags>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="..\LICENSE">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
 
 </Project>
