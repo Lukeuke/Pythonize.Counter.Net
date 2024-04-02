@@ -22,9 +22,9 @@ public class Counter<T> where T : notnull
         
         foreach (var t in value)
         {
-            if (_counts.ContainsKey(t))
+            if (_counts.TryGetValue(t, out var count))
             {
-                _counts[t] += 1;
+                _counts[t] = count + 1;
             }
             else
             {
@@ -47,9 +47,9 @@ public class Counter<T> where T : notnull
         
         foreach (var t in value)
         {
-            if (_counts.ContainsKey(t))
+            if (_counts.TryGetValue(t, out var count))
             {
-                _counts[t] += 1;
+                _counts[t] = count + 1;
             }
             else
             {
