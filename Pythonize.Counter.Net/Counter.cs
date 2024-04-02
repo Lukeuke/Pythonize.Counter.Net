@@ -114,4 +114,13 @@ public class Counter<T> where T : notnull
         return mostCommon.OrderByDescending(pair => pair.Value)
             .Take(count);
     }
+
+    /// <summary>
+    /// Calculate the sum of the counts.
+    /// </summary>
+    /// <returns>Sum of the counts.</returns>
+    public int Total()
+    {
+        return _counts.Values.Sum();
+    }
 }
