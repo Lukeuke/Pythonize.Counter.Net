@@ -1,5 +1,6 @@
 # Pythonize.Counter.Net
 ![Tests](https://github.com/Lukeuke/Pythonize.Counter.Net/actions/workflows/dotnet.yml/badge.svg)
+![Build](https://github.com/Lukeuke/Pythonize.Counter.Net/actions/workflows/build-only.yml/badge.svg)
 
 ## Description
 
