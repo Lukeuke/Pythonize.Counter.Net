@@ -94,24 +94,10 @@ public class Counter<T> where T : notnull
     {
         if (count < 1)
         {
-            throw new ArgumentOutOfRangeException(nameof(count), "value must be > 1");
+            throw new ArgumentOutOfRangeException(nameof(count), "value must be greater than 0");
         }
         
-        var mostCommon = new Dictionary<T, int>();
-
-        foreach (var pair in _counts)
-        {
-            if (mostCommon.TryGetValue(pair.Key, out var countPair))
-            {
-                mostCommon[pair.Key] += countPair;
-            }
-            else
-            {
-                mostCommon.Add(pair.Key, pair.Value);
-            }
-        }
-
-        return mostCommon.OrderByDescending(pair => pair.Value)
+        return _counts.OrderByDescending(pair => pair.Value)
             .Take(count);
     }
 
