@@ -23,4 +23,4 @@ var counts = counter.Get();
 ```
 
 ## License
-This library is licensed under the MIT License. See the <a href="https://github.com/Lukeuke/Pythonize.Counter.Net/blob/main/LICENSE"> LICENSE </a> file for details.
+This library is licensed under the MIT License. See the [LICENSE](https://github.com/Lukeuke/Pythonize.Counter.Net/blob/main/LICENSE") file for details.
