@@ -22,5 +22,8 @@ var counter = new Counter<char>(value);
 var counts = counter.Get();
 ```
 
+## Changelog
+See all changes with versions [Here](https://github.com/Lukeuke/Pythonize.Counter.Net/blob/main/CHANGELOG.md)
+
 ## License
-This library is licensed under the MIT License. See the [LICENSE](https://github.com/Lukeuke/Pythonize.Counter.Net/blob/main/LICENSE") file for details.
+This library is licensed under the MIT License. See the [LICENSE](https://github.com/Lukeuke/Pythonize.Counter.Net/blob/main/LICENSE) file for details.

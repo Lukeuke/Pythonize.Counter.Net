@@ -13,7 +13,7 @@
         <RepositoryUrl>https://github.com/Lukeuke/Pythonize.Counter.Net</RepositoryUrl>
         <PackageTags>Counter, Python</PackageTags>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <Version>1.0.3</Version>
+        <Version>1.0.4</Version>
     </PropertyGroup>
 
     <ItemGroup>
