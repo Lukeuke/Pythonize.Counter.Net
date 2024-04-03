@@ -1,4 +1,6 @@
-﻿namespace Pythonize.Counter.Net;
+﻿using System.Runtime.InteropServices;
+
+namespace Pythonize.Counter.Net;
 
 /// <summary>
 /// Represents a python-like counter that counts occurrences of items of type T.
@@ -20,16 +22,9 @@ public class Counter<T> where T : notnull
             throw new ArgumentNullException(nameof(value), "value must not be null.");
         }
         
-        foreach (var t in value)
+        foreach (var item in value)
         {
-            if (_counts.TryGetValue(t, out var count))
-            {
-                _counts[t] = count + 1;
-            }
-            else
-            {
-                _counts[t] = 1;
-            }
+            CollectionsMarshal.GetValueRefOrAddDefault(_counts, item, out _)++;
         }
     }
     
@@ -45,16 +40,9 @@ public class Counter<T> where T : notnull
             throw new ArgumentNullException(nameof(value), "value must not be null.");
         }
         
-        foreach (var t in value)
+        foreach (var item in value)
         {
-            if (_counts.TryGetValue(t, out var count))
-            {
-                _counts[t] = count + 1;
-            }
-            else
-            {
-                _counts[t] = 1;
-            }
+            CollectionsMarshal.GetValueRefOrAddDefault(_counts, item, out _)++;
         }
     }
     

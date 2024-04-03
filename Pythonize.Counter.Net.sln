@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pythonize.Counter.Net", "Py
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pythonize.Counter.Net.Tests", "Pythonize.Counter.Net.Tests\Pythonize.Counter.Net.Tests.csproj", "{DFCC5CD7-9411-4442-9BDC-35FCB32A4F4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pythonize.Counter.Net.Benchmark", "Pythonize.Counter.Net.Benchmark\Pythonize.Counter.Net.Benchmark.csproj", "{FFD06438-204E-4309-9845-35047651C755}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{DFCC5CD7-9411-4442-9BDC-35FCB32A4F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFCC5CD7-9411-4442-9BDC-35FCB32A4F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFCC5CD7-9411-4442-9BDC-35FCB32A4F4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD06438-204E-4309-9845-35047651C755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD06438-204E-4309-9845-35047651C755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD06438-204E-4309-9845-35047651C755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD06438-204E-4309-9845-35047651C755}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
