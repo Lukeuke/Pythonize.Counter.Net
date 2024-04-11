@@ -70,7 +70,7 @@ Returns the specified number of most common elements along with their counts fro
 var counter = new Counter<string>(new[] { "apple", "banana", "apple", "orange", "banana", "banana" });
 var elements = counter.MostCommon(2);
 // Output:
-// { ("banana": 3), ("banana": 2) }
+// { ("banana": 3), ("apple": 2) }
 ```
 
 ### Exceptions
