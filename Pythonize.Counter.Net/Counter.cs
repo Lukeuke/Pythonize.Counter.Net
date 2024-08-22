@@ -56,6 +56,39 @@ public class Counter<T> where T : notnull
     }
 
     /// <summary>
+    /// Removes an item from Counter
+    /// </summary>
+    /// <param name="item">Item to remove</param>
+    /// <returns>true or false if item was removed</returns>
+    public bool Remove(T item)
+    {
+        return _counts.Remove(item);
+    }
+
+    /// <summary>
+    /// Method subtracts two counters
+    /// </summary>
+    /// <param name="counter">Counter class from which we want to subtract</param>
+    /// <exception cref="ArgumentException">Thrown when ne of counter types does not match.</exception>
+    public void Subtract(Counter<T> counter)
+    {
+        if (_counts.GetType() != counter.Get().GetType())
+        {
+            throw new ArgumentException("One of types does not match.");
+        }
+
+        foreach (var (value, count) in counter.Get())
+        {
+            _counts[value] -= count;
+            
+            if (_counts[value] == 0)
+            {
+                _counts.Remove(value);
+            }
+        }
+    }
+    
+    /// <summary>
     /// Returns an enumerable of elements based on the counts of items.
     /// </summary>
     /// <returns>An enumerable containing elements based on the counts of items.</returns>
